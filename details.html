@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <div class="text-center">
+                <h1>📦 المنتج</h1>
+                <h2 class="text-primary" id="arName"></h2>
+            </div>
+
+            <div class="text-center mt-4">
+                <h5 class="fw-bold">🖼️ صورة المنتج</h5>
+                <img id="productImage" class="img-thumbnail shadow-lg">
+            </div>
+
+            <div class="mt-4">
+                <h4 class="text-dark">📌 تفاصيل المنتج</h4>
+                <p class="text-wrap" id="arDescription"></p>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="index.html" class="btn btn-primary btn-lg">⬅️ العودة للقائمة</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetchProductDetails();
+        });
+
+        async function fetchProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get("id");
+
+            if (!productId) {
+                alert("❌ المنتج غير موجود!");
+                window.location.href = "index.html";
+                return;
+            }
+
+            try {
+                let response = await fetch(`https://cozoneapi.runasp.net/api/Product/${productId}`);
+                if (!response.ok) throw new Error("Product not found");
+
+                let product = await response.json();
+
+                document.getElementById("arName").textContent = product.arName;
+                document.getElementById("productImage").src = product.img;
+                document.getElementById("arDescription").innerHTML = product.arDescription;
+            } catch (error) {
+                console.error("Error fetching product details:", error);
+                alert("❌ فشل في تحميل المنتج!");
+            }
+        }
+    </script>
+
+</body>
+</html>
