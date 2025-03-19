@@ -18,7 +18,7 @@
             
             products.forEach(product => {
                 let productCard = `
-                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"style="width:55%;">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"style="width:55%;">
     <div class="card h-100 shadow-sm" >
         <div class="ratio ratio-4x3">
             <img src="${product.img}" class="card-img-top" alt="${product.arName || 'منتج'}" 
@@ -65,9 +65,9 @@
                     event.preventDefault();
                     const lang = this.getAttribute("data-lang");
                     if (lang === "en") {
-                        window.location.href = "/Home/en";
+                        window.location.href = "";
                     } else if (lang === "ar") {
-                        window.location.href = "/Home/index";
+                        window.location.href = "";
                     }
                 });
             });
@@ -125,6 +125,37 @@
 
             container.appendChild(bubble);
         }
+        /////////////////////
+        document.addEventListener("DOMContentLoaded", function() {
+    // Hero section image rotation
+    const heroSection = document.querySelector(".hero-section");
+    const heroImages = ["back2.jpeg", "2.jpeg", "3.jpeg"];
+    let currentImageIndex = 0;
+    
+    // Set initial background
+    heroSection.style.backgroundImage = `url('${heroImages[0]}')`;
+    
+    // Change background image every 7 seconds
+    setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+        heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+    }, 5000);
+    
+    // Bubble animation (existing code)
+    const bubbleContainer = document.getElementById("bubble-container");
+    const containerWidth = bubbleContainer.offsetWidth;
+    const containerHeight = bubbleContainer.offsetHeight;
+
+    // Create 20 bubbles
+    for (let i = 0; i < 20; i++) {
+        createBubble(bubbleContainer, containerWidth, containerHeight);
+    }
+
+    // Continue creating bubbles at intervals
+    setInterval(() => {
+        createBubble(bubbleContainer, containerWidth, containerHeight);
+    }, 1000);
+});
     </script>
     <style>
         .collapse:not(.show) {
@@ -292,7 +323,7 @@
         <div class="row align-items-center">
             <!-- Left Part - Image -->
             <div class="col-md-6 image-container">
-                <img src="photo2.jpg" alt="Sample Image" class="img-fluid">
+                <img src="health.jpeg" alt="Sample Image" class="img-fluid">
             </div>
             <!-- Right Part - Text -->
             <div class="col-md-6">
@@ -317,7 +348,7 @@
                 <p style="display: flex;justify-content: center;">نحن شركه للمكملات الطبيه بمنتجات طبيعيه نباتيه </p>
             </div>
             <div class="col-md-6 image-container">
-                <img src="photo.jpg" alt="Sample Image" class="img-fluid">
+                <img src="photo2.jpg" alt="Sample Image" class="img-fluid">
             </div>
         </div>
     </div>
