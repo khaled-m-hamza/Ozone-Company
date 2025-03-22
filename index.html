@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,7 +67,7 @@
                     event.preventDefault();
                     const lang = this.getAttribute("data-lang");
                     if (lang === "en") {
-                        window.location.href = "";
+                        window.location.href = "enindex.html";
                     } else if (lang === "ar") {
                         window.location.href = "";
                     }
@@ -268,7 +268,6 @@
             }
         }
         /* ///////////////////////// */
-        
         .core-values {
             padding: 5rem 0;
             background-color: white;
@@ -303,7 +302,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-    
+        
         .value-box:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -372,8 +371,10 @@
                 <li class="nav-item dropdown" id="languageDropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="font-weight: bolder;">اللغه</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">عربيه</a></li>
+                       
                         <li><a class="dropdown-item" href="#" data-lang="en">انجليزيه</a></li>
+                       
+
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -397,7 +398,7 @@
     </div>
     <section class="core-values">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-md-4">
                     <div class="value-box">
                         <div class="value-icon">
@@ -539,8 +540,14 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="ratio ratio-16x9">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29383.334960273092!2d47.960395592809235!3d29.376174846895495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9c83ce455983%3A0xc3ebaef5af09b90e!2sKuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2seg!4v1729602633729!5m2!1sen!2seg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28969.19894022147!2d55.73012611663247!3d24.20754190609124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5799337a6c3a45%3A0xb99e4d64fef35890!2z2KfZhNiq2KfZhdi52Kkg2YXYr9mK2LHZitmG!5e0!3m2!1sen!2sae!4v1711122334455!5m2!1sen!2sae" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
+                
             </div>
             <div class="col-lg-6" style="padding: 5%;direction: rtl;">
                 <h2 class="mb-4" style="color:white"> تواصل معنا</h2>
@@ -551,7 +558,7 @@
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
                     </div>
-                    <div  style="color:white">OZONE شركه<br>شارع احمد بك, الدور الرابع ,الامارات.</div>
+                    <div  style="color:white">OZONE شركه<br>الامارات :مدينه العين.</div>
                 </div>
                 <div class="d-flex align-items-center mb-3">
                     <div class="icon-wrapper me-3">
