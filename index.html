@@ -20,7 +20,7 @@
             
             products.forEach(product => {
                 let productCard = `
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"style="width:45%;">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"style="width:55%;">
     <div class="card h-100 shadow-sm" >
         <div class="ratio ratio-4x3">
             <img src="${product.img}" class="card-img-top" alt="${product.arName || 'منتج'}" 
@@ -357,6 +357,11 @@
         .about-content  {
          font-weight: bolder;
         }
+        .certification-image {
+            max-height: 150px;
+            object-fit: contain;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -446,13 +451,34 @@
                         <h2>OZONE شركة</h2>
                         <p>نحن شركة متخصصة في المكملات الغذائية والمستحضرات الطبيعية. نسعى دائمًا لتقديم منتجات طبيعية نباتية عالية الجودة تلبي احتياجات عملائنا وتساهم في تحسين صحتهم وجودة حياتهم.</p>
                         <p>نلتزم في OZONE بأعلى معايير الجودة والسلامة في جميع منتجاتنا، ونستخدم مكونات طبيعية مختارة بعناية لضمان فعاليتها وأمانها.</p>
+                        <h2>؟Ozone  لماذا تثق في منتجات </h2>
+                        <p>تضمن لك اوزون أعلى المعايير القياسية للجودة والكفائة من خلال أفضل وأجود المواد الطبيعية المنتقاة بعناية ،لتناسب احتياجاتك الطبية والغذائية ، وبتقنيات تصنيعية فريدة من الولايات المتحدة الأمريكية،وتطبيق أعلى مقاييس الجودة ، لذا 
+                            فإن منتجاتنا  حاصلة على شهادة إدارة الغذاء والدواء الأمريكية  FDA،  وكذلك شهادة جودة التصنيع GMP 
+                             لنصنع معا تكاملا فريدا  وقصة نجاح </p>
                     </div>
                 </div>
                
             </div>
         </div>
     </section>
-  
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="text-center mb-4" style="font-weight: bolder;color: #17c1a3;">شهادات معتمده</h2>
+            </div>
+            
+            <!-- Certification Images -->
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center align-items-center">
+                    <!-- <img src="c1.jpeg" alt="Certification 1" class="certification-image"> -->
+                    <img src="c5.jpeg" alt="Certification 2" class="certification-image">
+                    <img src="c3.jpeg" alt="Certification 3" class="certification-image">
+                    <img src="c4.jpeg" alt="Certification 4" class="certification-image">
+            
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Products Section -->
     <div class="container-fluid py-5" id="section4" style="background-color: #f8f9fa;">
         <div class="container">
