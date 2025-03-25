@@ -20,7 +20,7 @@
             
             products.forEach(product => {
                 let productCard = `
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"style="width:45%;">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"style="width:55%;">
     <div class="card h-100 shadow-sm" >
         <div class="ratio ratio-4x3">
             <img src="${product.img}" class="card-img-top" alt="${product.enName || 'Product'}" 
@@ -357,6 +357,11 @@
         .about-content  {
          font-weight: bolder;
         }
+        .certification-image {
+            max-height: 150px;
+            object-fit: contain;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -451,6 +456,26 @@
         </div>
     </section>
   
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="text-center mb-4" style="font-weight: bolder;color: #17c1a3;">Why trust Ozone products?</h2>
+            </div>
+            <p style="font-weight: bolder;margin: 0;">Ozone guarantees you the highest standards of quality and efficiency through the best and finest natural materials carefully selected to suit your medical and nutritional needs, with unique manufacturing techniques from the United States of America, and the application of the highest quality standards.</p>
+            <p style="font-weight: bolder;">Let's create a unique integration and a distinctive success story together. Our products are certified by the U.S. Food and Drug Administration (FDA) and have obtained Good Manufacturing Practice (GMP) certification.</p>
+         
+            <!-- Certification Images -->
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center align-items-center">
+
+                    <img src="c1.jpeg" alt="Certification 2" class="certification-image">
+                    <img src="c3.jpeg" alt="Certification 4" class="certification-image">
+                    <img src="c2.jpeg" alt="Certification 3" class="certification-image">
+            
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Products Section -->
     <div class="container-fluid py-5" id="section4" style="background-color: #f8f9fa;">
         <div class="container">
